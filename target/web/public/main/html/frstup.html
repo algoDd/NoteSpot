@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Notes
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link rel="icon" href="http://www.admissionjankari.com/image.axd?College=JIMS%20Engineering%20Management%20Technical%20Campus.png" type="image/x-icon">
+<link href="CSS/up1.css" rel="stylesheet" type="text/css">
+<link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<header>
+   	    <ul>
+		    	<li> <a href="index.php">HOME</a></li>
+			<li> <a href="about1.php">ABOUT</a></li>
+			<li> <a href="contact1.php">CONTACT</a></li>
+			<li> <a href="gallery.php">GALLERY</a>		 
+		</ul>
+<button onclick="logout()">Logout</button>
+<script>
+function logout() {
+alert("logging out");
+var revoke=function(){auth2.disconnect();}
+window.location.href="index.php":
+}
+</script>
+		</header>
+<style>
+.mySlides {display:none;}
+</style>
+<div class="slider">
+<figure>
+<img class="mySlides" src="http://cdn.wallpapersafari.com/55/40/QRl4ZB.jpg" style="width:60%"/>
+<img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/564x/29/46/4a/29464aa3c5800484f4577ca0c53f8953.jpg" style="width:60%"/>
+<img class="mySlides" src="http://eskipaper.com/images/books-wallpaper-2.jpg"style="width:60%"/>
+<img class="mySlides" src="http://cdn.wallpapersafari.com/2/33/eLN2hs.jpg"style="width:60%"/>
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000); 
+}
+</script>
+</div>
+<div class="but">
+<a href="Sindex.php"><button class="button">UPLOAD</button></a>
+<a href="view.php"><button class="button">VIEW</button></a>
+</div>
+<div class="footer">
+         <ul>
+		   <li><a href="index.php">HOME</a></li>
+		   <li><a href="about1.php">ABOUT</a></li>
+		   <li><a href="contact1.php">CONTACT</a></li>
+		   <li><a href="gallery.php">GALLERY</a></li>
+		 </ul>
+	www.jimsgn.org JIMS Gretaer Noida
+	</div>
+</body>
+</html>

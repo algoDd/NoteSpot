@@ -1,4 +1,0 @@
-[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(/home/dd/Prac/notespot/conf/application.conf,/home/dd/Prac/notespot/target/scala-2.11/classes/application.conf)[0m
-[0m[[0mdebug[0m] [0m	(/home/dd/Prac/notespot/conf/logback.xml,/home/dd/Prac/notespot/target/scala-2.11/classes/logback.xml)[0m
-[0m[[0mdebug[0m] [0m	(/home/dd/Prac/notespot/conf/routes,/home/dd/Prac/notespot/target/scala-2.11/classes/routes)[0m

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/dd/Prac/notes/notespot/conf/routes
-// @DATE:Mon Jul 24 14:53:40 IST 2017
+// @DATE:Mon Jul 24 22:49:18 IST 2017
 
 package router
 
@@ -48,6 +48,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.Assets.at(path:String = "/public", file:String = "html/login.html")"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """signup""", """controllers.Assets.at(path:String = "/public", file:String = "html/signup.html")"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/signup""", """controllers.LoginController.signup"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/login""", """controllers.LoginController.login"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -199,6 +200,24 @@ class Routes(
     )
   )
 
+  // @LINE:19
+  private[this] lazy val controllers_LoginController_login8_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("api/login")))
+  )
+  private[this] lazy val controllers_LoginController_login8_invoker = createInvoker(
+    LoginController_0.login,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.LoginController",
+      "login",
+      Nil,
+      "POST",
+      this.prefix + """api/login""",
+      """login""",
+      Seq()
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
@@ -248,6 +267,12 @@ class Routes(
     case controllers_LoginController_signup7_route(params) =>
       call { 
         controllers_LoginController_signup7_invoker.call(LoginController_0.signup)
+      }
+  
+    // @LINE:19
+    case controllers_LoginController_login8_route(params) =>
+      call { 
+        controllers_LoginController_login8_invoker.call(LoginController_0.login)
       }
   }
 }

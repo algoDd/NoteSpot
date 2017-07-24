@@ -1,5 +1,8 @@
 package dao;
+import java.util.List;
+
 import com.avaje.ebean.Ebean;
+import com.avaje.ebean.ExpressionList;
 
 import models.LoginModel;
 import play.api.mvc.Result;
@@ -15,13 +18,14 @@ public class LoginDao{
 		}
 		return true;
 	}
-//	public static Result login() {
-//		Result result=null;
-//		try {
-//			result=LoginModel.find.where("username",username);
-//		}catch(Exception e)
-//		{
-//			
-//		}
-//	}
+	public static List<LoginModel> login(String username) {
+	List<LoginModel> list=null;
+		try {
+			list=LoginModel.find.where().ieq("username", username).findList();
+		}catch(Exception e)
+		{
+			return list;
+		}
+		return list;
+	}
 }

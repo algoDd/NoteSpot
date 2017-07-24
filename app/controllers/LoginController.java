@@ -28,8 +28,25 @@ public class LoginController extends Controller{
 		}
 		
 	}
-//	public Result login(){
-//		var username=LoginModel.getUsername();
-//		helper.login(username);
-//	}
+	public Result login(){
+		JsonNode body=request().body().asJson();
+		if(body!=null) {
+		String username=body.get("user").asText();
+		String password=body.get("password").asText();
+		try {
+		Boolean check=helper.login(username,password);
+		if(check==true)
+			{
+			return ok("Logged IN");
+			}else {
+				return  badRequest("UserName Or Password May Be Incorrect Please Try Again!");
+			}
+		}catch(Exception e) {
+			return badRequest("SomeThing! Gone Wrong Please Try Again Later");
+		}
+		
+		}else {
+			return badRequest("UserName Or Password Can't Be Empty!!");
+		}
+	}
 }

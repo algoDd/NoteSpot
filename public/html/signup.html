@@ -12,6 +12,9 @@ SIGN UP!
 <script src="/assets/javascripts/angular.min.js" type="text/javascript"></script>
 <script src="/assets/javascripts/angular-ui-router.min.js"></script>
 <script src="/assets/javascripts/angular-route.min.js" type="text/javascript"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="/assets/javascripts/HandleHtml.js" type="text/javascript"></script>
 </head>
 <body ng-app="handlingApp" ng-controller="handlingCrtl">
@@ -25,24 +28,23 @@ SIGN UP!
      <div id=email>
 	   <input type="email" name="Email" ng-model="emailId" placeholder="Enter Your Email ID" required/><br><br></div>
        <input type="password" name="pass" ng-model="password" placeholder=" Enter your password" required/><br><br>
-	   <input type="password" name="cpass" placeholder=" Confirm Your Password" required/><br><br>
-	   <select name="gender">
-	    <option>Gender</option>
-	    <option>Male</option>
-		<option>Female</option>
-	   </select>
-	   <select name="branch">
-	    <option>Branch</option>
-	    <option>CSE</option>
-		<option>ECE</option>
-		<option>EE</option>
-		<option>CIVIL</option>
-		<option>MECHANICAL</option>
-	   </select>
+	   <input type="password" name="cpass" ng-model="cpassword" placeholder=" Confirm Your Password" required/><br><br>
+	 
 	   
 	   <button class="btn btn-success" ng-click="signup()">REGISTER</button>
+	   
      
   </div>
+  <div class="container">
+  <div class="alert alert-success alert-dismissible" ng-show="success">
+  
+    <strong>Success!</strong> WELCOME TO NOTESPOT! WAIT A SEC WE ARE REDIRECTING YOU
+  </div>
+   <div class="alert alert-danger alert-dismissible" ng-show="error" >
+    
+    <strong>Error!</strong> SOMETHING WENT WRONG! PLEASE TRY AGAIN
+  </div>
+</div>
   
 </body>
 </html>

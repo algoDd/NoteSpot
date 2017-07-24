@@ -46,14 +46,14 @@ public class LoginModel extends Model{
 	public int getId() {
 		return id;
 	}
-	public LoginModel(String username,String emailId,String password,String oldPassword)
+	public LoginModel(String username,String password,String emailId,String oldPassword)
 	{
 		this.username=username;
 		this.emailId=emailId;
 		this.password=password;
 		this.oldPassword=oldPassword;
 	}
-	public LoginModel(String username,String emailId,String password)
+	public LoginModel(String username,String password,String emailId)
 	{
 		this.username=username;
 		this.emailId=emailId;

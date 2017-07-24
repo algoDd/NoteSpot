@@ -1,20 +1,29 @@
 <html>
 <head>
 <link href="/assets/CSS/login.css" rel="stylesheet" type="text/css">
+<script src="/assets/javascripts/jquery.min.js"></script>
+<script src="assets/javascripts/bootstrap.min.js"></script>
+<script src="/assets/javascripts/angular.min.js" type="text/javascript"></script>
+<script src="/assets/javascripts/angular-ui-router.min.js"></script>
+<script src="/assets/javascripts/angular-route.min.js" type="text/javascript"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/assets/javascripts/HandleHtml.js" type="text/javascript"></script>
 </head>
 
-<body ng-controller="handlingCrtl">
+<body ng-app="handlingApp" ng-controller="handlingCrtl">
    <div class="login-form">
       <div class="face">
 	  <img src="assets/images/login.png">
 	  </div>
-     <form>
+  
        <input type="text" name="username" placeholder=" Enter your Username" required/ autocomplete="on" ng-model="username"><br><br>
        <input type="password" name="password" ng-model="password" placeholder=" Enter your password" required/><br><br>
-	   <a  id="forgot" href="#">Forgot Password ?</a><br><br>
+	   <a  id="forgot" href="#" >Forgot Password ?</a><br><br>
 	   <p class="error-msg">Wrong Credentials</p>
-	   <input type="submit" name="sub" value="Login" ng-click="login()">
-     </form>	   
+	   <button class="btn btn-info" ng-click="login()">Login</button>
+     	   
    </div>
 <div id="my-signin2" align="center" data-width="300" data-height="200"></div>
 </body>

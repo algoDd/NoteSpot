@@ -28,7 +28,8 @@ app.config(function($stateProvider,$urlRouterProvider)
 		});
 });
 app.controller('handlingCrtl',function($scope,$http){
-	$scope.test="hey";
+	$scope.success=false;
+	$scope.error=false;
 	$scope.renderButton=function(){
 		gapi.signin2.render('my-signin2', {
 			'scope': 'profile email',
@@ -36,34 +37,61 @@ app.controller('handlingCrtl',function($scope,$http){
 			'height': 50,
 			'longtitle': true,
 			'theme': 'dark',
-			'onsuccess': onSuccess,
-			'onfailure': onFailure
-			}).onSuccess(function(googleUser) {
+			'onsuccess': success,
+			'onfailure': failure
+			}).success(function(googleUser) {
 				console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
 				alert("Logged in as: "+ googleUser.getBasicProfile().getName());
 				window.location.href="frstup.php";
-				}).onFailure(function(error) {
+				}).failure(function(error) {
 					console.log(error);
 				});
 	}
-	/*$scope.login=function(){
+	$scope.login=function(){
 		var user=$scope.username;
 		var pass=$scope.password;
+		if(user!=null||pass!=null){
 		$http({
-			method:'GET',
-			url:'/api/login'
-			
+			method:'POST',
+			url:'/api/login',
+			data:{'user':user,'password':pass}
+		}).success(function(response){
+			alert(response);
+			 window.location = "/frstup";
+		}).error(function(response){
+			alert(response);
 		});
-	}*/
+		}else
+			{
+			alert("UserName Or Password Can't Be Empty!!");
+			}
+	}
 	$scope.signup=function(){
+		$scope.error=false;
+		if($scope.password==$scope.cpassword)
+		{
 		$http({
 			method:'POST',
 			url:'/api/signup',
 			data:{"username":$scope.username,"email_id":$scope.emailId,"password":$scope.password}
 		}).success(function(response){
-			 alert("Done!");
+			
+			 setTimeout(function(){
+				 $scope.success=false;
+				 window.location = "/login";
+			 },3000);
+			 $scope.success=true;
 			}).error(function(response){
-				alert(response);
+				$scope.error=true;
 			});
-		}
+		
+		}else
+			{
+				$scope.error=true;
+				 setTimeout(function(){
+					 $scope.error=false;
+					
+				 },3000);
+			}
+	}
 });

@@ -21,7 +21,7 @@
 	font-family:tahoma;
 	font-weight:bold;
 	padding:5px;
-
+color: blue;
 }
 select{
 	width:123px;
@@ -33,11 +33,11 @@ select{
 	font-weight:bold;
 	padding:5px;
 	margin-bottom:15px;
-	
+	color: blue;
 }
 .login-form input[type="submit"]{
 	background: green;
-	color: white;
+	color: blue;
 	cursor:pointer;
 	height:40px;
 	cursor:pointer;

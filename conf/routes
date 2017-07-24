@@ -15,5 +15,6 @@ GET /login								controllers.Assets.at(path="/public", file="html/login.html")
 GET /signup								controllers.Assets.at(path="/public", file="html/signup.html")
 #signup
 POST /api/signup							controllers.LoginController.signup
-
+#login
+POST /api/login								controllers.LoginController.login
 

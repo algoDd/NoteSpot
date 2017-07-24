@@ -4,7 +4,7 @@
 		module="notespot_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20170723170337"
+		publication="20170724145340"
 	>
 		<description>
 		NoteSpot
@@ -49,7 +49,6 @@
 		<dependency org="com.typesafe.play" name="play-test_2.11" rev="2.6.2" conf="test->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-omnidoc_2.11" rev="2.6.2" conf="docs->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-java-forms_2.11" rev="2.6.2" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.play" name="filters-helpers_2.11" rev="2.6.2" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-logback_2.11" rev="2.6.2" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-akka-http-server_2.11" rev="2.6.2" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-java-jdbc_2.11" rev="2.6.2" conf="compile->default(compile)"/>

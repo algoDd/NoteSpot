@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/dd/Prac/notes/notespot/conf/routes
-// @DATE:Sun Jul 23 17:03:37 IST 2017
+// @DATE:Mon Jul 24 14:53:40 IST 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -11,6 +11,26 @@ import _root_.play.libs.F
 
 // @LINE:6
 package controllers.javascript {
+
+  // @LINE:17
+  class ReverseLoginController(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:17
+    def signup: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.LoginController.signup",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "api/signup"})
+        }
+      """
+    )
+  
+  }
 
   // @LINE:6
   class ReverseAssets(_prefix: => String) {
@@ -40,6 +60,14 @@ package controllers.javascript {
         
           if (file1 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("html/contact1.html") + """) {
             return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "contact"})
+          }
+        
+          if (file1 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("html/login.html") + """) {
+            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
+          }
+        
+          if (file1 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("html/signup.html") + """) {
+            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "signup"})
           }
         
         }

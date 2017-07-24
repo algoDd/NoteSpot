@@ -1,0 +1,145 @@
+*{
+	margin:0px;
+
+}
+body{
+	background:linear-gradient(DarkCyan,DarkSlateGrey,black);
+	background-attachment:fixed;
+	height:100vh;
+}
+ul {
+	list-style: none;
+
+}
+header{
+	width: 100%;
+	height: 90px;
+	background-color:black;
+	font-size:20px;
+	opacity:0.6;
+
+}
+header ul li a {
+	text-decoration:none;
+	display:block;
+	padding:40px;
+	margin-left:120px;
+	color: white;
+	font-weight:bold;
+}
+header ul li {
+	float:left;
+}
+header ul li a:hover{
+	background-color:darkcyan;
+	opacity:1;
+	height:10px;
+	color:black;
+}
+.list-group-item{
+	text-decoration:none;
+	color: white;
+	font-style:italic;
+	padding:30px;
+}
+.slider{
+	margin-top:100px;
+	margin-left:370px;
+}
+.slider img{
+border:2px double #20B2AA;
+box-shadow:10px 5px 10px #20B2AA;
+opacity:0.8;
+width:100%;
+height:60vh;
+}
+.but{
+	margin-top:150px;
+	margin-bottom:30px;
+	background: url(http://www.print-imagingsummit.com/wp-content/uploads/2014/12/cropped-home-design-backgrounds-triangles-abstract-wallpaper-1390455030-triangles-abstract-wallpaper-dazzling-triangular-interior-728x409.png);
+    width:100%;
+	height:200px;
+	border: 5px solid rgb(1,53,51);
+}
+.but .button{
+	margin-left:280px;
+	margin-top:60px;
+}
+.button {
+  display: inline-block;
+  padding: 25px 35px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background-color:darkcyan;
+  opacity:0.9;
+  border: 2px solid darkslategrey;
+  border-radius: 15px;
+  box-shadow: 0 9px black;
+  width:250px;
+  font-family: tahoma;
+  font-weight:bold;
+}
+.button a{
+	text-decoration: none;
+	color:rgb(102,70,27);
+}
+
+.button:hover {
+background-color:darkcyan;
+font-size:25px;
+opacity:1;
+}
+
+.button:active {
+  background-color: darkcyan;
+  box-shadow: 0 5px darkslategrey;
+  transform: translateY(4px);
+  font-size:25px;
+  opacity:1;
+}
+.frm button{
+margin:0 0 0 50%;
+}
+.footer{
+	width:100%;
+	height:120px;
+    background-color:rgb(1,53,51);
+	border: 2px solid rgb(155, 239, 235);
+	border-radius:10px;
+	margin-top:50px;
+	margin-bottom:10px;
+	color:white;
+	clear:both;
+	padding-top:20px;
+	font-family:tahoma;
+	font-size: 15px;
+	text-align: center;
+}
+.footer ul  {
+	width: 450px;
+	padding: 10px;
+	list-style-type: none;
+	background-color: rgba(0,0,0,0.3);
+	margin:10px;
+	margin-left:450px;
+	margin-top:20px;
+}
+.footer ul li {
+	display:inline;
+}
+.footer ul li a {
+	text-decoration: none;
+	font-family:tahoma;
+	color: white;
+	padding:10px;
+	font-size:15px;
+}
+.footer ul li :hover {
+	color:black;
+	background-color: darkcyan;
+	cursor:pointer;
+}

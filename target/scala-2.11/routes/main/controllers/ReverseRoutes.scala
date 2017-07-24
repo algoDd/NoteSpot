@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/dd/Prac/notes/notespot/conf/routes
-// @DATE:Sun Jul 23 17:03:37 IST 2017
+// @DATE:Mon Jul 24 14:53:40 IST 2017
 
 import play.api.mvc.Call
 
@@ -11,6 +11,21 @@ import _root_.play.libs.F
 
 // @LINE:6
 package controllers {
+
+  // @LINE:17
+  class ReverseLoginController(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:17
+    def signup(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "api/signup")
+    }
+  
+  }
 
   // @LINE:6
   class ReverseAssets(_prefix: => String) {
@@ -43,6 +58,16 @@ package controllers {
         case (file) if file == "html/contact1.html" =>
           implicit val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"), ("file", "html/contact1.html")))
           Call("GET", _prefix + { _defaultPrefix } + "contact")
+      
+        // @LINE:14
+        case (file) if file == "html/login.html" =>
+          implicit val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"), ("file", "html/login.html")))
+          Call("GET", _prefix + { _defaultPrefix } + "login")
+      
+        // @LINE:15
+        case (file) if file == "html/signup.html" =>
+          implicit val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"), ("file", "html/signup.html")))
+          Call("GET", _prefix + { _defaultPrefix } + "signup")
       
       }
     

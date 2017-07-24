@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/dd/Prac/notes/notespot/conf/routes
-// @DATE:Sun Jul 23 17:03:37 IST 2017
+// @DATE:Mon Jul 24 14:53:40 IST 2017
 
 
 package router {

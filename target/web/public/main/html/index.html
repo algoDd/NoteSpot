@@ -11,6 +11,9 @@ JIMS Engineering and Management Technical Campus
 
 <link   href="assets/CSS/style3.css" rel="stylesheet" type="text/css">
 <link href="/assets/CSS/about1.css" rel="stylesheet" type="text/css">
+<link href="/assets/CSS/login.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="assets/CSS/signup.css" type="text/css">
+<link href="assets/CSS/up1.css" rel="stylesheet" type="text/css">
 
 
 <script src="/assets/javascripts/jquery.min.js"></script>
@@ -19,6 +22,7 @@ JIMS Engineering and Management Technical Campus
 <script src="/assets/javascripts/angular-ui-router.min.js"></script>
 <script src="/assets/javascripts/angular-route.min.js" type="text/javascript"></script>
 <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+
 
 <!-- ui routing 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
@@ -29,7 +33,7 @@ JIMS Engineering and Management Technical Campus
 </head>
 <body ng-app="handlingApp" ng-controller="handlingCrtl">
 
-<div>
+<div id="navbar">
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -42,17 +46,16 @@ JIMS Engineering and Management Technical Campus
       
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="signup">SIGN UP<span class="fa fa-user"></span></a></li>
-      <li><a href="login" ng-click="renderButton()">LOGIN<span class="fa fa-sign-in "></span></a></li>
+      <li><a ui-sref="signup">SIGN UP<span class="fa fa-user"></span></a></li>
+      <li><a ui-sref="login" ng-click="renderButton()">LOGIN<span class="fa fa-sign-in "></span></a></li>
     </ul>
   </div>
 </nav>
   
       
 </div>
-<div id="mainpage">
-<div ui-view></div>
 
+<div id="mainpage" ui-view></div>
  
  <!-- 
  <section class="gallery">
@@ -108,7 +111,7 @@ JIMS Engineering and Management Technical Campus
 		 </ul>
 	www.jimsgn.org © JIMS Gretaer Noida
 	</div>
-</div>
+
 
 </body>
 </html>

@@ -9,14 +9,54 @@
 p{
 	font-family:tahoma;
 }
+#navbar{
+	position: fixed;
+    width: 100%;
+    z-index: 1;
+    max-width: 100%;
+    margin-top: -5%;
+     max-height:100%;
+
+}
+.navbar-inverse
+{
+	#background-color:rgba(237, 245, 243, 0);
+	#background-color: rgba(75, 193, 228, 0.14);
+	background-color: rgba(0, 0, 0, 0.55);
+	#color:#2b3044;
+	max-width: 100%;
+}
+@media only screen and (max-width:500px) {
+	#mainpage {
+    border: 1px solid #000000;
+    box-shadow: 2px 2px 20px 0px;
+    background-blend-mode: color-dodge;
+    height: 100%;
+    margin: 90% 10% 0 10%;
+    background-color: rgba(0, 0, 0, 0.55);
+    }
+    #navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    max-width: 100%;
+    margin-top: -90%;
+    max-height: 100%;
+ }
+ 
+}
 body {
 	
 font-family: tahoma;
-background-image:url("/assets/images/classbook.gif");
+#background-image:url("/assets/images/classbook.gif");
  background-repeat: no-repeat;
+ background-color:#2e3436;
  background-size:cover;
+ background-image:url("/assets/images/book.jpg");
     background-attachment: fixed;
     background-position: center;
+    max-height:100%;
+    max-width:100%;
 
 	  }
 .hero{
@@ -32,6 +72,7 @@ margin-top:2%;
 border: 4px solid darkcyan;
 border-radius: 10px;
 }
+
 header{
 
 	height:100vh;
@@ -40,12 +81,16 @@ header{
 	background-attachment:fixed;
 }
 #mainpage{
-	border:1px solid black;
-	box-shadow:2px 2px 2px 5px;
+	border:1px solid #000000;
+	box-shadow:2px 2px 20px 0px;;
+	background-blend-mode: color-dodge;
 	height:100%;
-margin:0 10% 0 10%;
-background:black;
+	
+margin:5% 10% 0 10%;
+background-color: rgba(0, 0, 0, 0.55);
+#background:#000000;
 opacity:0.8;
+ 
 }
 h1{
 	color: black;
@@ -244,12 +289,11 @@ margin:5% 0% 10% 25%;
 .footer{
 	width:100%;
 	height:120px;
-    background-color:darkcyan;
-	border: 2px solid rgb(155, 239, 235);
-	border-radius:10px;
+     
+	
 	margin-top:500px;
 	margin-bottom:10px;
-	color:black;
+	color:white;
 	clear:both;
 	padding-top:20px;
 	font-family:tahoma;
@@ -257,13 +301,11 @@ margin:5% 0% 10% 25%;
 	text-align: center;
 }
 .footer ul  {
-	width: 450px;
-	padding: 10px;
-	list-style-type: none;
-	background-color: rgba(0,0,0,0.3);
-	margin:10px;
-	margin-left:450px;
-	margin-top:20px;
+	width: 100%;
+    padding: 2%;
+    list-style-type: none;
+    background-color: rgba(0,0,0,0.8);
+    margin-top: 5%;
 }
 .footer ul li {
 	display:inline;
@@ -271,12 +313,12 @@ margin:5% 0% 10% 25%;
 .footer ul li a {
 	text-decoration: none;
 	font-family:tahoma;
-	color: black;
-	padding:10px;
+	color: white;
+	padding:2%;
 	font-size:15px;
 }
 .footer ul li :hover {
-	color:black;
-	background-color: darkcyan;
+	color:white;
+	background-color: #555753;
 	cursor:pointer;
 }

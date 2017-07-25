@@ -1,7 +1,4 @@
-*{
-	margin:0px;
-	padding:0px;
-}
+
 body{
     font-family: tahoma;
 	
@@ -9,7 +6,7 @@ body{
 .bg {
 	
 	
-	margin:5% 2% 0 2%;
+margin: 10% 2% 0 2%;
 	color: white;
 	font-family : tahoma;
 	font-size: 20px;

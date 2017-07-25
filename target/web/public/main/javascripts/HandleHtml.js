@@ -5,17 +5,17 @@ app.config(function($stateProvider,$urlRouterProvider)
 		{
 	$urlRouterProvider.otherwise('home');
 	$stateProvider
-		.state('about',{
+	.state('home',{
+		name: 'home',
+		url:'/index',
+		templateUrl:'/assets/html/home.html'
+	}).state('about',{
 			name: 'about',
 			url:'/about',
 			templateUrl:'/assets/html/about1.html'
-		}).state('home',{
-			name: 'home',
-			url:'/home',
-			templateUrl:'/assets/html/home.html'
 		}).state('contact',{
 			name: 'contact',
-			url:'/about',
+			url:'/contact',
 			templateUrl:'/assets/html/contact1.html'
 		}).state('login',{
 			name: 'login',
@@ -28,37 +28,43 @@ app.config(function($stateProvider,$urlRouterProvider)
 		});
 });
 app.controller('handlingCrtl',function($scope,$http){
+	$scope.count=0;
 	$scope.success=false;
 	$scope.error=false;
-	$scope.renderButton=function(){
+	/*$scope.renderButton=function(){
 		gapi.signin2.render('my-signin2', {
 			'scope': 'profile email',
 			'width': 240,
 			'height': 50,
 			'longtitle': true,
 			'theme': 'dark',
-			'onsuccess': success,
-			'onfailure': failure
-			}).success(function(googleUser) {
+			'onsuccess': Onsuccess,
+			'onfailure': Onfailure
+			}).Onsuccess(function(googleUser) {
 				console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
 				alert("Logged in as: "+ googleUser.getBasicProfile().getName());
 				window.location.href="frstup.php";
-				}).failure(function(error) {
+				}).Onfailure(function(error) {
 					console.log(error);
 				});
-	}
-	$scope.login=function(){
-		var user=$scope.username;
-		var pass=$scope.password;
+	}*/
+	$scope.login=function(user,pass){
+		
+		$scope.username=user;
+		$scope.password=pass;
 		if(user!=null||pass!=null){
 		$http({
 			method:'POST',
 			url:'/api/login',
 			data:{'user':user,'password':pass}
 		}).success(function(response){
+//			$cookie.put('username',user);
+//			$cookie.put('password',pass);
 			alert(response);
 			 window.location = "/frstup";
 		}).error(function(response){
+			$scope.count=$scope.count+1;
+			//alert($cookie.get('username'));
 			alert(response);
 		});
 		}else

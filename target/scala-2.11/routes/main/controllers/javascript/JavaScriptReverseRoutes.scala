@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/dd/Prac/notes/notespot/conf/routes
-// @DATE:Mon Jul 24 22:49:18 IST 2017
+// @DATE:Tue Jul 25 10:10:53 IST 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -12,7 +12,7 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers.javascript {
 
-  // @LINE:17
+  // @LINE:19
   class ReverseLoginController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -20,7 +20,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:17
+    // @LINE:19
     def signup: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.LoginController.signup",
       """
@@ -30,7 +30,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:19
+    // @LINE:21
     def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.LoginController.login",
       """
@@ -54,30 +54,10 @@ package controllers.javascript {
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
-        function(file1) {
+        function() {
         
-          if (file1 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("html/index.html") + """) {
+          if (true) {
             return _wA({method:"GET", url:"""" + _prefix + """"})
-          }
-        
-          if (file1 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("html/about1.html") + """) {
-            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "about"})
-          }
-        
-          if (file1 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("html/home.html") + """) {
-            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "home"})
-          }
-        
-          if (file1 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("html/contact1.html") + """) {
-            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "contact"})
-          }
-        
-          if (file1 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("html/login.html") + """) {
-            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
-          }
-        
-          if (file1 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("html/signup.html") + """) {
-            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "signup"})
           }
         
         }

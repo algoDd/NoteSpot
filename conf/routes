@@ -8,11 +8,13 @@ GET     /                          controllers.Assets.at(path="/public",file="ht
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 #Handling Html						
-GET /about								controllers.Assets.at(path="/public", file="html/about1.html")
-GET /home								controllers.Assets.at(path="/public", file="html/home.html")
-GET /contact							controllers.Assets.at(path="/public", file="html/contact1.html")
-GET /login								controllers.Assets.at(path="/public", file="html/login.html")
-GET /signup								controllers.Assets.at(path="/public", file="html/signup.html")
+GET /about								controllers.Assets.at(path="/public", file="html/index.html")
+GET /index								controllers.Assets.at(path="/public", file="html/index.html")
+GET /home								controllers.Assets.at(path="/public", file="html/index.html")
+GET /contact							controllers.Assets.at(path="/public", file="html/index.html")
+GET /login								controllers.Assets.at(path="/public", file="html/index.html")
+GET /signup								controllers.Assets.at(path="/public", file="html/index.html")
+
 #signup
 POST /api/signup							controllers.LoginController.signup
 #login

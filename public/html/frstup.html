@@ -1,29 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>
-Notes
-</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
-<link rel="icon" href="http://www.admissionjankari.com/image.axd?College=JIMS%20Engineering%20Management%20Technical%20Campus.png" type="image/x-icon">
-<link href="CSS/up1.css" rel="stylesheet" type="text/css">
-<link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
-</head>
-<body>
-<header>
-   	    <ul>
-		    	<li> <a href="index.php">HOME</a></li>
-			<li> <a href="about1.php">ABOUT</a></li>
-			<li> <a href="contact1.php">CONTACT</a></li>
-			<li> <a href="gallery.php">GALLERY</a>		 
-		</ul>
+
+<body ng-controller="handlingCrtl">
+
 <button onclick="logout()">Logout</button>
 <script>
 function logout() {
 alert("logging out");
 var revoke=function(){auth2.disconnect();}
-window.location.href="index.php":
+window.location.href="/":
 }
 </script>
 		</header>
@@ -59,14 +42,6 @@ function carousel() {
 <a href="Sindex.php"><button class="button">UPLOAD</button></a>
 <a href="view.php"><button class="button">VIEW</button></a>
 </div>
-<div class="footer">
-         <ul>
-		   <li><a href="index.php">HOME</a></li>
-		   <li><a href="about1.php">ABOUT</a></li>
-		   <li><a href="contact1.php">CONTACT</a></li>
-		   <li><a href="gallery.php">GALLERY</a></li>
-		 </ul>
-	www.jimsgn.org JIMS Gretaer Noida
-	</div>
+
 </body>
 </html>

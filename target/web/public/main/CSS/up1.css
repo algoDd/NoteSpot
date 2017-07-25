@@ -2,11 +2,7 @@
 	margin:0px;
 
 }
-body{
-	background:linear-gradient(DarkCyan,DarkSlateGrey,black);
-	background-attachment:fixed;
-	height:100vh;
-}
+
 ul {
 	list-style: none;
 
@@ -103,43 +99,4 @@ opacity:1;
 }
 .frm button{
 margin:0 0 0 50%;
-}
-.footer{
-	width:100%;
-	height:120px;
-    background-color:rgb(1,53,51);
-	border: 2px solid rgb(155, 239, 235);
-	border-radius:10px;
-	margin-top:50px;
-	margin-bottom:10px;
-	color:white;
-	clear:both;
-	padding-top:20px;
-	font-family:tahoma;
-	font-size: 15px;
-	text-align: center;
-}
-.footer ul  {
-	width: 450px;
-	padding: 10px;
-	list-style-type: none;
-	background-color: rgba(0,0,0,0.3);
-	margin:10px;
-	margin-left:450px;
-	margin-top:20px;
-}
-.footer ul li {
-	display:inline;
-}
-.footer ul li a {
-	text-decoration: none;
-	font-family:tahoma;
-	color: white;
-	padding:10px;
-	font-size:15px;
-}
-.footer ul li :hover {
-	color:black;
-	background-color: darkcyan;
-	cursor:pointer;
 }

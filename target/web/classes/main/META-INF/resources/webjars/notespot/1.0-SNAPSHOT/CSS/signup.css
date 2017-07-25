@@ -59,46 +59,7 @@ select{
 	border-radius:100%;
 	overflow:hidden;
 }
-.footer{
-	width:100%;
-	height:120px;
-    background-color:darkcyan;
-	border: 2px solid rgb(155, 239, 235);
-	border-radius:10px;
-	margin-top:200px;
-	margin-bottom:10px;
-	color:white;
-	clear:both;
-	padding-top:20px;
-	font-family:tahoma;
-	font-size: 15px;
-	text-align: center;
-}
-.footer ul  {
-	width: 450px;
-	padding: 10px;
-	list-style-type: none;
-	background-color: rgba(0,0,0,0.3);
-	margin:10px;
-	margin-left:450px;
-	margin-top:20px;
-	height:18px;
-}
-.footer ul li {
-	display:inline-block;
-}
-.footer ul li a {
-	text-decoration: none;
-	font-family:tahoma;
-	color: white;
-	padding:10px;
-	font-size:15px;
-}
-.footer ul li :hover {
-	color:black;
-	background-color: darkcyan;
-	cursor:pointer;
-}
+
 .list-group-item{
 	text-decoration:none;
 	color: white;

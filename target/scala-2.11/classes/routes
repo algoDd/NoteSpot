@@ -12,11 +12,15 @@ GET /about								controllers.Assets.at(path="/public", file="html/index.html")
 GET /index								controllers.Assets.at(path="/public", file="html/index.html")
 GET /home								controllers.Assets.at(path="/public", file="html/index.html")
 GET /contact							controllers.Assets.at(path="/public", file="html/index.html")
+GET /notespot								controllers.Assets.at(path="/public", file="html/upload.html")
 GET /login								controllers.Assets.at(path="/public", file="html/index.html")
+
 GET /signup								controllers.Assets.at(path="/public", file="html/index.html")
+GET /api/notespot							controllers.LoginController.check(username:String)
 
 #signup
 POST /api/signup							controllers.LoginController.signup
 #login
 POST /api/login								controllers.LoginController.login
-
+#upload
+POST /api/upload								controllers.LoginController.upload

@@ -5,6 +5,8 @@ import com.avaje.ebean.Ebean;
 import com.avaje.ebean.ExpressionList;
 
 import models.LoginModel;
+import models.UploadModel;
+import models.uploadModel;
 import play.api.mvc.Result;
 
 public class LoginDao{
@@ -28,4 +30,14 @@ public class LoginDao{
 		}
 		return list;
 	}
+	public static Boolean upload(UploadModel upload) {
+		try {
+			Ebean.save(upload);
+		}catch(Exception e)
+		{
+			return false;
+		}
+		return true;
+	}
+	
 }

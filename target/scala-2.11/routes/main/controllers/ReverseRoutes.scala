@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/dd/Prac/notes/notespot/conf/routes
-// @DATE:Tue Jul 25 10:10:53 IST 2017
+// @DATE:Thu Jul 27 17:04:42 IST 2017
 
 import play.api.mvc.Call
 
@@ -19,13 +19,25 @@ package controllers {
     }
 
   
-    // @LINE:19
+    // @LINE:26
+    def upload(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "api/upload")
+    }
+  
+    // @LINE:22
     def signup(): Call = {
       
       Call("POST", _prefix + { _defaultPrefix } + "api/signup")
     }
   
-    // @LINE:21
+    // @LINE:19
+    def check(username:String): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "api/notespot" + play.core.routing.queryString(List(Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("username", username)))))
+    }
+  
+    // @LINE:24
     def login(): Call = {
       
       Call("POST", _prefix + { _defaultPrefix } + "api/login")
@@ -41,14 +53,19 @@ package controllers {
 
   
     // @LINE:6
-    def at(): Call = {
+    def at(file:String): Call = {
     
-      () match {
+      (file: @unchecked) match {
       
         // @LINE:6
-        case ()  =>
+        case (file) if file == "html/index.html" =>
           implicit val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"), ("file", "html/index.html")))
           Call("GET", _prefix)
+      
+        // @LINE:15
+        case (file) if file == "html/upload.html" =>
+          implicit val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"), ("file", "html/upload.html")))
+          Call("GET", _prefix + { _defaultPrefix } + "notespot")
       
       }
     

@@ -3,7 +3,8 @@ var app=angular.module('handlingApp',['ui.router']);
 
 app.config(function($stateProvider,$urlRouterProvider)
 		{
-	$urlRouterProvider.otherwise('home');
+	$urlRouterProvider.otherwise('/');
+	$urlRouterProvider.when('/assests/html/upload.html','/');
 	$stateProvider
 	.state('home',{
 		name: 'home',
@@ -27,10 +28,11 @@ app.config(function($stateProvider,$urlRouterProvider)
 			templateUrl:'/assets/html/signup.html'
 		});
 });
-app.controller('handlingCrtl',function($scope,$http){
+app.controller('handlingCrtl',function($scope,$http,$state,$rootScope){
 	$scope.count=0;
 	$scope.success=false;
 	$scope.error=false;
+	$scope.test="yo man";
 	/*$scope.renderButton=function(){
 		gapi.signin2.render('my-signin2', {
 			'scope': 'profile email',
@@ -61,16 +63,34 @@ app.controller('handlingCrtl',function($scope,$http){
 //			$cookie.put('username',user);
 //			$cookie.put('password',pass);
 			alert(response);
-			 window.location = "/frstup";
+		//	$scope.get();
+			window.location="/api/notespot?username="+$scope.username;
+			 
+			 //$scope.carousel();
 		}).error(function(response){
 			$scope.count=$scope.count+1;
 			//alert($cookie.get('username'));
+			
 			alert(response);
 		});
 		}else
 			{
-			alert("UserName Or Password Can't Be Empty!!");
+			 alert("UserName Or Password Can't Be Empty!!");
 			}
+	}
+	$scope.get=function()
+	{
+		$http({
+			method:'GET',
+			url:"/api/notespot?username="+$scope.username,
+			
+		}).success(function(response){
+//			$cookie.put('username',user);
+//			$cookie.put('password',pass);
+			//$state.go(response);
+			 
+			 //$scope.carousel();
+		});
 	}
 	$scope.signup=function(){
 		$scope.error=false;
@@ -100,4 +120,22 @@ app.controller('handlingCrtl',function($scope,$http){
 				 },3000);
 			}
 	}
+	 $scope.onLoad = function (e, reader, file, fileList, fileOjects, fileObj) {
+		    alert('this is handler for file reader onload event!');
+		  };
+
+	/*var myIndex = 0;
+	
+
+	$scope.carousel=function() {
+	    var i;
+	    var x = document.getElementsByClassName("mySlides");
+	    for (i = 0; i < x.length; i++) {
+	       x[i].style.display = "none";  
+	    }
+	    myIndex++;
+	    if (myIndex > x.length) {myIndex = 1}    
+	    //document.getElementsByClassName("mySlides")[myIndex-1].style.display = "block";  
+	    setTimeout(carousel, 3000); 
+	}*/
 });

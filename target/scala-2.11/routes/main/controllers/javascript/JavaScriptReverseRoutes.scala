@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/dd/Prac/notes/notespot/conf/routes
-// @DATE:Tue Jul 25 10:10:53 IST 2017
+// @DATE:Thu Jul 27 17:04:42 IST 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -20,7 +20,17 @@ package controllers.javascript {
     }
 
   
-    // @LINE:19
+    // @LINE:26
+    def upload: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.LoginController.upload",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "api/upload"})
+        }
+      """
+    )
+  
+    // @LINE:22
     def signup: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.LoginController.signup",
       """
@@ -30,7 +40,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:21
+    // @LINE:19
+    def check: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.LoginController.check",
+      """
+        function(username0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "api/notespot" + _qS([(""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("username", username0)])})
+        }
+      """
+    )
+  
+    // @LINE:24
     def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.LoginController.login",
       """
@@ -54,10 +74,38 @@ package controllers.javascript {
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
-        function() {
+        function(file1) {
         
-          if (true) {
+          if (file1 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("html/index.html") + """) {
             return _wA({method:"GET", url:"""" + _prefix + """"})
+          }
+        
+          if (file1 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("html/index.html") + """) {
+            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "about"})
+          }
+        
+          if (file1 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("html/index.html") + """) {
+            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "index"})
+          }
+        
+          if (file1 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("html/index.html") + """) {
+            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "home"})
+          }
+        
+          if (file1 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("html/index.html") + """) {
+            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "contact"})
+          }
+        
+          if (file1 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("html/upload.html") + """) {
+            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "notespot"})
+          }
+        
+          if (file1 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("html/index.html") + """) {
+            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
+          }
+        
+          if (file1 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("html/index.html") + """) {
+            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "signup"})
           }
         
         }

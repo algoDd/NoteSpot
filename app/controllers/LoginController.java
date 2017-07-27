@@ -1,7 +1,12 @@
 package controllers;
 import models.*;
+
+
 import play.mvc.Controller;
+
 import play.mvc.Result;
+
+
 
 import com.fasterxml.jackson.databind.JsonNode;
 
@@ -18,7 +23,9 @@ public class LoginController extends Controller{
 			LoginModel login=new LoginModel(username,password,emailid);
 			Boolean check=helper.signup(login);
 			if(check) {
+				
 				return ok("Signed Up succesfully");
+				
 			}else
 			{
 				return badRequest("Enter Valid Credentials****");
@@ -37,7 +44,11 @@ public class LoginController extends Controller{
 		Boolean check=helper.login(username,password);
 		if(check==true)
 			{
+			session("username", username);
+			session("password", password);
+			
 			return ok("Logged IN");
+			 
 			}else {
 				return  badRequest("UserName Or Password May Be Incorrect Please Try Again!");
 			}
@@ -49,4 +60,36 @@ public class LoginController extends Controller{
 			return badRequest("UserName Or Password Can't Be Empty!!");
 		}
 	}
+	
+	public Result check(String user){
+		
+		String username=session("username");
+		String password=session("password");
+		if(user.equals(username) && password!=null) {
+			
+			return redirect("/notespot");
+		}else
+		{
+			return badRequest("Not A Valid Request");
+		}
+		
+	}
+	public Result upload()
+	{
+		JsonNode body=request().body().asJson();
+		String filename=body.get("filename").asText();
+		String filesize=body.get("filesize").asText();
+		String filetype=body.get("filetype").asText();
+		String filebase64=body.get("filebase64").asText();
+		UploadModel upload1= new UploadModel(filebase64,filetype,filesize,filename);
+		Boolean check=helper.upload(upload1);
+		if(check==true) {
+			return ok("Uploaded");
+		}else {
+			return badRequest("not uploaded");
+		}
+	}
 }
+
+
+

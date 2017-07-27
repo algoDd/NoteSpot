@@ -3,6 +3,7 @@ package helper;
 import java.util.List;
 import dao.LoginDao;
 import models.LoginModel;
+import models.uploadModel;
 import play.api.mvc.Result;
 public class LoginHelper{
 
@@ -33,4 +34,12 @@ public class LoginHelper{
 	}
 		
 	}
+	public Boolean upload(UploadModel upload1) {
+		
+		return LoginDao.upload(upload1);
+	}
 }
+
+
+
+

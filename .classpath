@@ -64,7 +64,6 @@
   <classpathentry kind="lib" path="/root/.ivy2/cache/org.springframework/spring-context/jars/spring-context-4.3.9.RELEASE.jar"/>
   <classpathentry kind="lib" path="/root/.ivy2/cache/org.springframework/spring-core/jars/spring-core-4.3.9.RELEASE.jar"/>
   <classpathentry kind="lib" path="/root/.ivy2/cache/org.springframework/spring-beans/jars/spring-beans-4.3.9.RELEASE.jar"/>
-  <classpathentry kind="lib" path="/root/.ivy2/cache/com.typesafe.play/filters-helpers_2.11/jars/filters-helpers_2.11-2.6.2.jar"/>
   <classpathentry kind="lib" path="/root/.ivy2/cache/com.typesafe.play/play-logback_2.11/jars/play-logback_2.11-2.6.2.jar"/>
   <classpathentry kind="lib" path="/root/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.2.3.jar"/>
   <classpathentry kind="lib" path="/root/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.2.3.jar"/>

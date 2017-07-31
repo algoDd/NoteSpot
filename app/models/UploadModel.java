@@ -16,9 +16,9 @@ public class UploadModel extends Model{
 	String filebase64;
 	@Column(name="filetype")
 	String filetype;
-	@Column(name="String filesize")
+	@Column(name="filesize")
 	String filesize;
-	@Column(name="String filename")
+	@Column(name="filename")
 	String filename;
 	
 

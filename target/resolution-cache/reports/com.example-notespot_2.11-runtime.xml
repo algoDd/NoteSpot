@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="runtime"
 		confs="universal, universal-docs, universal-src, compile, runtime, test, provided, optional, windows, docker, linux, rpm, debian, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20170727220659"/>
+		date="20170731125201"/>
 	<dependencies>
 		<module organisation="com.google.code.maven-play-plugin.org.playframework" name="play">
 			<revision name="1.2.6.1" status="release" pubdate="20150513174522" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.playframework.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="152">

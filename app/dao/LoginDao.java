@@ -2,12 +2,10 @@ package dao;
 import java.util.List;
 
 import com.avaje.ebean.Ebean;
-import com.avaje.ebean.ExpressionList;
 
 import models.LoginModel;
 import models.UploadModel;
-import models.uploadModel;
-import play.api.mvc.Result;
+
 
 public class LoginDao{
 	public static Boolean signup(LoginModel login){

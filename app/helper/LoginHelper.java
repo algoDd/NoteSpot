@@ -3,7 +3,8 @@ package helper;
 import java.util.List;
 import dao.LoginDao;
 import models.LoginModel;
-import models.uploadModel;
+import models.UploadModel;
+
 import play.api.mvc.Result;
 public class LoginHelper{
 

@@ -16,8 +16,8 @@ create table notespot.upload (
   id                        serial not null,
   filebase64                varchar(255),
   filetype                  varchar(255),
-  String filesize           varchar(255),
-  String filename           varchar(255),
+  filesize                  varchar(255),
+  filename                  varchar(255),
   constraint pk_upload primary key (id))
 ;
 

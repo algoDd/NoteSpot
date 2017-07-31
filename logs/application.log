@@ -1,6 +1,6 @@
-2017-07-27 22:44:25,249 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-12 - Creating Pool for datasource 'default'
-2017-07-27 22:44:25,362 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-12 - Database [default] connected at jdbc:postgresql://localhost:5432/notes
-2017-07-27 22:44:26,044 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-12 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2017-07-31 12:59:08,289 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-13 - Creating Pool for datasource 'default'
+2017-07-31 12:59:08,402 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-13 - Database [default] connected at jdbc:postgresql://localhost:5432/notes
+2017-07-31 12:59:09,167 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-13 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
 
-2017-07-27 22:44:26,231 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-12 - Application started (Dev)
+2017-07-31 12:59:09,407 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-13 - Application started (Dev)

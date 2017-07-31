@@ -15,10 +15,11 @@ app.controller('uploadCrtl',function($scope,$http,$rootScope){
 		    //window.open($scope.files);
 		    if(fileObj.filetype=="application/pdf" &&fileObj.filesize<3000000)
 		    	{
+		    		var size=fileObj.filesize.toString();
 		    		$http({
 		    			method:"POST",
 		    			url:"/api/upload",
-		    			data:{"filename":fileObj.filename,"filesize":fileObj.filesize,"filetype":fileObj.filetype,"filebase64":fileObj.base64}
+		    			data:{"filename":fileObj.filename,"filesize":size,"filetype":fileObj.filetype,"filebase64":fileObj.base64}
 		    		}).success(function(response){
 		    			alert("file saved");
 		    		}).error(function(response){

@@ -26,6 +26,10 @@ app.config(function($stateProvider,$urlRouterProvider)
 			name: 'signup',
 			url:'/signup',
 			templateUrl:'/assets/html/signup.html'
+		}).state('admin',{
+			name: 'admin',
+			url:'/admin',
+			templateUrl:'/assets/html/admin.html'
 		});
 });
 app.controller('handlingCrtl',function($scope,$http,$state,$rootScope){
@@ -92,9 +96,12 @@ app.controller('handlingCrtl',function($scope,$http,$state,$rootScope){
 			 //$scope.carousel();
 		});
 	}
-	$scope.signup=function(){
+	$scope.signup=function(user,email,pass,cpass){
 		$scope.error=false;
-		if($scope.password==$scope.cpassword)
+		$scope.username=user;
+		$scope.emailId=email;
+		$scope.password=pass;
+		if(pass==cpass)
 		{
 		$http({
 			method:'POST',
@@ -125,6 +132,7 @@ app.controller('handlingCrtl',function($scope,$http,$state,$rootScope){
 		  };
 
 	/*var myIndex = 0;
+	 * 
 	
 
 	$scope.carousel=function() {

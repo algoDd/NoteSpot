@@ -5,6 +5,7 @@ import com.avaje.ebean.Ebean;
 
 import models.LoginModel;
 import models.UploadModel;
+import play.mvc.Result;
 
 
 public class LoginDao{
@@ -36,6 +37,16 @@ public class LoginDao{
 			return false;
 		}
 		return true;
+	}
+	public static List<UploadModel> getfiles() {
+		List<UploadModel> list=null;
+		try {
+		 list=UploadModel.find.all();
+		 return list;
+		}catch(Exception e)
+		{
+			return list;
+		}
 	}
 	
 }

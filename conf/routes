@@ -14,7 +14,7 @@ GET /home								controllers.Assets.at(path="/public", file="html/index.html")
 GET /contact							controllers.Assets.at(path="/public", file="html/index.html")
 GET /notespot								controllers.Assets.at(path="/public", file="html/upload.html")
 GET /login								controllers.Assets.at(path="/public", file="html/index.html")
-
+GET /admin								controllers.Assets.at(path="/public", file="html/admin.html")
 GET /signup								controllers.Assets.at(path="/public", file="html/index.html")
 GET /api/notespot							controllers.LoginController.check(username:String)
 
@@ -24,3 +24,7 @@ POST /api/signup							controllers.LoginController.signup
 POST /api/login								controllers.LoginController.login
 #upload
 POST /api/upload								controllers.LoginController.upload
+#get notes
+GET /api/uploadFiles						controllers.LoginController.getfiles
+#GET /second									controllers.Assets.at(path="/public", file="html/index.html")
+POST /api/addAdmin							controllers.AdminController.addAdmin

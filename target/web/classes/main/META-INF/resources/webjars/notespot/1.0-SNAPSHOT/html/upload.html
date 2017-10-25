@@ -1,6 +1,7 @@
 <html>
 <head>
 <link href="assets/CSS/edit.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/assets/font/css/font-awesome.css">
 <script src="/assets/javascripts/jquery.min.js"></script>
 <script src="assets/javascripts/bootstrap.min.js"></script>
 <script src="/assets/javascripts/angular.min.js" type="text/javascript"></script>
@@ -21,14 +22,7 @@
 <div class="up">
 <a href="#"><i class="material-icons" style="font-size:5em;color:Gainsboro;text-shadow:2px 2px 5px grey;">arrow_drop_up</i></a><br><br>
 </div>-->
-<div class="frm">
 
-<div class="in">
- <br><br><br><br><a href=""><input type="file" name="file" /></a><br><br>
-</div>
-
-<br><a href=""><button class="btn btn-info" ng-click="upload">upload</button></a>
-</div>
 <div class="input-group">
         <label for="file">Select File</label>
         <input type="file" ng-model="file" name="file" base-sixty-four-input required onload="onLoad" maxsize="500" accept="/*">
@@ -46,28 +40,25 @@
       </div>
     <b>Model Value:</b>
     
-    <table class="table table-bordered table-striped">
+    <table class="table table-bordered table-striped" >
       <tr>
         <th>filename</th>
-        <th>filetype</th>
-        <th>filesize (<i><small>KB</small></i>)</th>
-        <th>base64</th>
+        <th>download</th>
       </tr>
-      <tr ng-show="file">
-        <td>{{file.filename}}</td>
-        <td>{{file.filetype}}</td>
-        <td>{{file.filesize / 1000}}</td>
-                <td></td>
-        
-        <td>{{file.base64}}</td>
+    
+      <tr ng-show="show" ng-repeat="files in fileuploaded">
+        <td>{{files.filename}}</td>
+        <td><a download=pdfTitle ng-href={{files.filebas64}} title='Download pdf document'><i class="fa fa-file-o" aria-hidden="true"></i></a></td>
       </tr>
+      
       <tr>
         <td colspan="4" ng-show="!file">
           <small><i>No file selected.</i></small>
         </td>
       </tr>
     </table>
-    <a download=pdfTitle ng-href="{{files}}" title='Download pdf document'>View</a>
+    
+  
     
 </body>
 </html>

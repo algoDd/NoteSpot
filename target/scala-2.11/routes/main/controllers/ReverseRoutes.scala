@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/dd/Prac/notes/notespot/conf/routes
-// @DATE:Thu Jul 27 22:56:32 IST 2017
+// @DATE:Tue Oct 24 17:39:27 IST 2017
 
 import play.api.mvc.Call
 
@@ -25,6 +25,12 @@ package controllers {
       Call("POST", _prefix + { _defaultPrefix } + "api/upload")
     }
   
+    // @LINE:28
+    def getfiles(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "api/uploadFiles")
+    }
+  
     // @LINE:22
     def signup(): Call = {
       
@@ -41,6 +47,21 @@ package controllers {
     def login(): Call = {
       
       Call("POST", _prefix + { _defaultPrefix } + "api/login")
+    }
+  
+  }
+
+  // @LINE:30
+  class ReverseAdminController(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:30
+    def addAdmin(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "api/addAdmin")
     }
   
   }
@@ -66,6 +87,11 @@ package controllers {
         case (file) if file == "html/upload.html" =>
           implicit val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"), ("file", "html/upload.html")))
           Call("GET", _prefix + { _defaultPrefix } + "notespot")
+      
+        // @LINE:17
+        case (file) if file == "html/admin.html" =>
+          implicit val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"), ("file", "html/admin.html")))
+          Call("GET", _prefix + { _defaultPrefix } + "admin")
       
       }
     

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/dd/Prac/notes/notespot/conf/routes
-// @DATE:Thu Jul 27 22:56:32 IST 2017
+// @DATE:Tue Oct 24 17:39:27 IST 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -26,6 +26,16 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "api/upload"})
+        }
+      """
+    )
+  
+    // @LINE:28
+    def getfiles: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.LoginController.getfiles",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "api/uploadFiles"})
         }
       """
     )
@@ -56,6 +66,26 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "api/login"})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:30
+  class ReverseAdminController(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:30
+    def addAdmin: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.AdminController.addAdmin",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "api/addAdmin"})
         }
       """
     )
@@ -102,6 +132,10 @@ package controllers.javascript {
         
           if (file1 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("html/index.html") + """) {
             return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
+          }
+        
+          if (file1 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("html/admin.html") + """) {
+            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "admin"})
           }
         
           if (file1 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("html/index.html") + """) {

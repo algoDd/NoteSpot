@@ -6,14 +6,14 @@
 	   </div>
   
      <div id=uname>
-       <input type="text" name="username" value="" ng-model="username"placeholder=" My Username" required/><br><br></div>
+       <input type="text" name="username" value="" ng-model="username" placeholder=" My Username" required/><br><br></div>
      <div id=email>
 	   <input type="email" name="Email" ng-model="emailId" placeholder="Enter Your Email ID" required/><br><br></div>
        <input type="password" name="pass" ng-model="password" placeholder=" Enter your password" required/><br><br>
 	   <input type="password" name="cpass" ng-model="cpassword" placeholder=" Confirm Your Password" required/><br><br>
 	 
 	   
-	   <button class="btn btn-success" ng-click="signup()">REGISTER</button>
+	   <button class="btn btn-success" ng-click="signup(username,emailId,password,cpassword)">REGISTER</button>
 	   
      
   </div>

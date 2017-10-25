@@ -39,6 +39,10 @@ public class LoginHelper{
 		
 		return LoginDao.upload(upload1);
 	}
+	public List<UploadModel> getfiles() {
+		List<UploadModel>list= LoginDao.getfiles();
+		return list;
+	}
 }
 
 

@@ -7,7 +7,7 @@ import play.db.ebean.Model;
 
 
 @Entity
-@Table(name="notespot.upload")
+@Table(name="bn1dck4qd.upload")
 
 public class UploadModel extends Model{
 	@Id

@@ -6,7 +6,7 @@ import com.avaje.ebean.Model.Finder;
 
 import play.db.ebean.Model;
 @Entity
-@Table(name="notespot.admin")
+@Table(name="bn1dck4qd.admin")
 public class AdminModel extends Model {
   @Id
   int id;

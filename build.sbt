@@ -49,3 +49,4 @@ libraryDependencies += "org.apache.commons" % "commons-math3" % "3.5"
 libraryDependencies += guice
 libraryDependencies += "com.google.code.maven-play-plugin.org.playframework" % "play" % "1.2.6.1"
 libraryDependencies += "nz.ac.waikato.cms.weka" % "weka-dev" % "3.7.10"
+libraryDependencies += "tf56" % "risk" % "1.6.1" exclude("org.slf4j", "slf4j-log4j12")

@@ -1,0 +1,14 @@
+playGenerateSecret
+playUpdateSecret
+sbt update
+update sbt
+sbt --version
+exit
+show libraryDependencies
+play run --http.port=8080
+-Dhttp.port=80
+Dhttp.port=80
+slf4j jar
+jar
+show jar
+exit

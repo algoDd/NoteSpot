@@ -5,7 +5,7 @@ version := "1.0-SNAPSHOT"
 
 lazy val root = (project in file(".")).enablePlugins(PlayJava, PlayEbean)
 scalaVersion := "2.11.7"
-
+PlayKeys.externalizeResources := false
 libraryDependencies  ++= Seq(
  javaJdbc,
  cache,
@@ -43,10 +43,9 @@ libraryDependencies  ++= Seq(
 "javax.xml.crypto" % "jsr105-api" % "1.0.1",
 "com.jcraft" % "jsch" % "0.1.43-1",
 "org.jasypt" % "jasypt" % "1.9.2",
- "com.opencsv" % "opencsv" % "3.8",
- "log4j" % "log4j" % "1.2.14"
+ "com.opencsv" % "opencsv" % "3.8"
 )
 libraryDependencies += "org.apache.commons" % "commons-math3" % "3.5"
 libraryDependencies += guice
 libraryDependencies += "com.google.code.maven-play-plugin.org.playframework" % "play" % "1.2.6.1"
-
+libraryDependencies += "nz.ac.waikato.cms.weka" % "weka-dev" % "3.7.10"
